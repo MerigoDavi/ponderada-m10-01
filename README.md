@@ -1,2 +1,4 @@
-# ponderada-base-m10-01
-Atividade Ponderada 1
+# ponderada-m10-01
+
+primeiro comecei pelo mac mini mas encontramos um erro de graddle, como tinhamos pouco tempo para desenvolver a ponderada acabamos optando por fazer apenas no computador do Davi e compartilhar o repositório.
+eu e o davi demos push no repositorio base, deu erro de chaves SSH porque nao tava configurado as chaves e usamos o personal access token. Comecamos investigando o código, rodamos o código pra ver se tem algum erro de sintaxe. AO subir o emulador o pc do davi crashou por overflow de memoria. Murilo deu o tablet para testarmos, mas estava sem bateria e colocamos pra carregar..reiniciamos o computador e conseguimos rodar o emulador, ao rodar é perceptivel apos muitas tentativas que o resultado do D6 vai apenas de 0 a 5 quando deveria ser de 1 até 6. Agora vamos tentar achar onde o Murilo pediu para ter os números aleatórios. Achamos o erro, quando voce chama um random int ele vai de 0 até o valor colocado como parametro, entao se colocamos um +1 depois de pegar o valor ele vai pegar de 1 a 6.
