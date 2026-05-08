@@ -29,7 +29,7 @@ fun LancadorDeDadosApp() {
     var dadoSelecionado by remember { mutableStateOf("D6") }
     var resultado by remember { mutableStateOf("Clique no botão para lançar o dado") }
 
-    val dados = listOf("D6",)
+    val dados = listOf("D4","D6","D8","D10","D12","D20", "D100")
 
     Column(
         modifier = Modifier
@@ -64,7 +64,13 @@ fun LancadorDeDadosApp() {
         Button(
             onClick = {
                 val valorSorteado = when (dadoSelecionado) {
-                    "D6" -> Random.nextInt(6)
+                    "D4" -> Random.nextInt(4) + 1
+                    "D6" -> Random.nextInt(6) + 1
+                    "D8" -> Random.nextInt(8) + 1
+                    "D10" -> Random.nextInt(10) + 1
+                    "D12" -> Random.nextInt(12) + 1
+                    "D20" -> Random.nextInt(20) + 1
+                    "D100" -> Random.nextInt(100) + 1
                     else -> 0
                 }
 
